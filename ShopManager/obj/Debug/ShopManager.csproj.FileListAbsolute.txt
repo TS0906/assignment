@@ -1,0 +1,11 @@
+F:\Winform assignment\ShopManager\bin\Debug\ShopManager.exe.config
+F:\Winform assignment\ShopManager\bin\Debug\ShopManager.exe
+F:\Winform assignment\ShopManager\bin\Debug\ShopManager.pdb
+F:\Winform assignment\ShopManager\obj\Debug\ShopManager.csproj.AssemblyReference.cache
+F:\Winform assignment\ShopManager\obj\Debug\ShopManager.Properties.Resources.resources
+F:\Winform assignment\ShopManager\obj\Debug\ShopManager.csproj.GenerateResource.cache
+F:\Winform assignment\ShopManager\obj\Debug\ShopManager.csproj.CoreCompileInputs.cache
+F:\Winform assignment\ShopManager\obj\Debug\ShopManager.exe
+F:\Winform assignment\ShopManager\obj\Debug\ShopManager.pdb
+F:\Winform assignment\ShopManager\obj\Debug\ShopManager.frmLogin.resources
+F:\Winform assignment\ShopManager\obj\Debug\ShopManager.frmRegister.resources
