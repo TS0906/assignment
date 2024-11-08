@@ -1,22 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\C# group assignment\\assignment\\ShopManager\\",
+  "WorkspaceRootPath": "F:\\New\\assignment\\ShopManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|f:\\c# group assignment\\assignment\\shopmanager\\frmregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|solutionrelative:frmregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|F:\\C# group assignment\\assignment\\ShopManager\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|solutionrelative:frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|F:\\C# group assignment\\assignment\\ShopManager\\frmregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|F:\\New\\assignment\\ShopManager\\frmregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|solutionrelative:frmregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|F:\\C# group assignment\\assignment\\ShopManager\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|F:\\New\\assignment\\ShopManager\\frmregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|solutionrelative:frmregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|f:\\new\\assignment\\shopmanager\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|solutionrelative:frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|F:\\New\\assignment\\ShopManager\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|solutionrelative:frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,24 +34,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "frmRegister.cs",
-              "DocumentMoniker": "F:\\C# group assignment\\assignment\\ShopManager\\frmRegister.cs",
+              "DocumentMoniker": "F:\\New\\assignment\\ShopManager\\frmRegister.cs",
               "RelativeDocumentMoniker": "frmRegister.cs",
-              "ToolTip": "F:\\C# group assignment\\assignment\\ShopManager\\frmRegister.cs",
+              "ToolTip": "F:\\New\\assignment\\ShopManager\\frmRegister.cs",
               "RelativeToolTip": "frmRegister.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAQwCEAAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADYAAABPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-07T15:36:06.052Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "frmRegister.cs [Design]",
-              "DocumentMoniker": "F:\\C# group assignment\\assignment\\ShopManager\\frmRegister.cs",
+              "DocumentMoniker": "F:\\New\\assignment\\ShopManager\\frmRegister.cs",
               "RelativeDocumentMoniker": "frmRegister.cs",
-              "ToolTip": "F:\\C# group assignment\\assignment\\ShopManager\\frmRegister.cs [Design]",
+              "ToolTip": "F:\\New\\assignment\\ShopManager\\frmRegister.cs [Design]",
               "RelativeToolTip": "frmRegister.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-07T15:22:18.732Z",
@@ -59,11 +59,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "frmLogin.cs [Design]",
-              "DocumentMoniker": "F:\\C# group assignment\\assignment\\ShopManager\\frmLogin.cs",
+              "DocumentMoniker": "F:\\New\\assignment\\ShopManager\\frmLogin.cs",
               "RelativeDocumentMoniker": "frmLogin.cs",
-              "ToolTip": "F:\\C# group assignment\\assignment\\ShopManager\\frmLogin.cs [Design]",
+              "ToolTip": "F:\\New\\assignment\\ShopManager\\frmLogin.cs [Design]",
               "RelativeToolTip": "frmLogin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-07T15:04:25.051Z",
@@ -71,13 +71,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "frmLogin.cs",
-              "DocumentMoniker": "F:\\C# group assignment\\assignment\\ShopManager\\frmLogin.cs",
+              "DocumentMoniker": "F:\\New\\assignment\\ShopManager\\frmLogin.cs",
               "RelativeDocumentMoniker": "frmLogin.cs",
-              "ToolTip": "F:\\C# group assignment\\assignment\\ShopManager\\frmLogin.cs",
+              "ToolTip": "F:\\New\\assignment\\ShopManager\\frmLogin.cs",
               "RelativeToolTip": "frmLogin.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAQwCEAAABSAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAwB8AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-07T15:36:16.089Z",
               "EditorCaption": ""

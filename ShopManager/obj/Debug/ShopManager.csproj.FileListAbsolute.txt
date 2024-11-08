@@ -20,3 +20,14 @@ F:\C# group assignment\assignment\ShopManager\obj\Debug\ShopManager.csproj.Gener
 F:\C# group assignment\assignment\ShopManager\obj\Debug\ShopManager.csproj.CoreCompileInputs.cache
 F:\C# group assignment\assignment\ShopManager\obj\Debug\ShopManager.exe
 F:\C# group assignment\assignment\ShopManager\obj\Debug\ShopManager.pdb
+F:\New\assignment\ShopManager\bin\Debug\ShopManager.exe.config
+F:\New\assignment\ShopManager\bin\Debug\ShopManager.exe
+F:\New\assignment\ShopManager\bin\Debug\ShopManager.pdb
+F:\New\assignment\ShopManager\obj\Debug\ShopManager.csproj.AssemblyReference.cache
+F:\New\assignment\ShopManager\obj\Debug\ShopManager.frmLogin.resources
+F:\New\assignment\ShopManager\obj\Debug\ShopManager.frmRegister.resources
+F:\New\assignment\ShopManager\obj\Debug\ShopManager.Properties.Resources.resources
+F:\New\assignment\ShopManager\obj\Debug\ShopManager.csproj.GenerateResource.cache
+F:\New\assignment\ShopManager\obj\Debug\ShopManager.csproj.CoreCompileInputs.cache
+F:\New\assignment\ShopManager\obj\Debug\ShopManager.exe
+F:\New\assignment\ShopManager\obj\Debug\ShopManager.pdb

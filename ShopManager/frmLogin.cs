@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +18,18 @@ namespace ShopManager
         {
             InitializeComponent();
         }
-
+        private bool CheckCredentials(string username, string password)
+        {
+            foreach (var line in File.ReadLines("credentials.txt"))
+            {
+                string[] parts = line.Split(':'); // Tách tên tài khoản và mật khẩu
+                if (parts[0] == username && parts[1] == password)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
         private void close_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -32,6 +45,21 @@ namespace ShopManager
         private void chkLogin_showpass_CheckedChanged(object sender, EventArgs e)
         {
             txtLogin_password.PasswordChar = chkLogin_showpass.Checked ? '\0' : '*';
+        }
+
+        private void btnLogin_Click_1(object sender, EventArgs e)
+        {
+            string username = txtLogin_username.Text;
+            string password = txtLogin_password.Text;
+
+            if (CheckCredentials(username, password))
+            {
+                MessageBox.Show("Đăng nhập thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không chính xác.");
+            }
         }
     }
 }
