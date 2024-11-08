@@ -29,5 +29,12 @@ namespace ShopManager
 
             this.Hide();
         }
+
+        private void chkRegister_showpass_CheckedChanged(object sender, EventArgs e)
+        {
+            txtRegister_password.PasswordChar = chkRegister_showpass.Checked ? '\0' : '*';
+            txtRegister_rpassword.PasswordChar = chkRegister_showpass.Checked ? '\0' : '*';
+            // \0 lam textbox hien thi duoi dang binh thuong
+        }
     }
 }

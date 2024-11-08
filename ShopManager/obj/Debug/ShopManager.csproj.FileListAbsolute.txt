@@ -9,3 +9,14 @@ F:\Winform assignment\ShopManager\obj\Debug\ShopManager.exe
 F:\Winform assignment\ShopManager\obj\Debug\ShopManager.pdb
 F:\Winform assignment\ShopManager\obj\Debug\ShopManager.frmLogin.resources
 F:\Winform assignment\ShopManager\obj\Debug\ShopManager.frmRegister.resources
+F:\C# group assignment\assignment\ShopManager\bin\Debug\ShopManager.exe.config
+F:\C# group assignment\assignment\ShopManager\bin\Debug\ShopManager.exe
+F:\C# group assignment\assignment\ShopManager\bin\Debug\ShopManager.pdb
+F:\C# group assignment\assignment\ShopManager\obj\Debug\ShopManager.csproj.AssemblyReference.cache
+F:\C# group assignment\assignment\ShopManager\obj\Debug\ShopManager.frmLogin.resources
+F:\C# group assignment\assignment\ShopManager\obj\Debug\ShopManager.frmRegister.resources
+F:\C# group assignment\assignment\ShopManager\obj\Debug\ShopManager.Properties.Resources.resources
+F:\C# group assignment\assignment\ShopManager\obj\Debug\ShopManager.csproj.GenerateResource.cache
+F:\C# group assignment\assignment\ShopManager\obj\Debug\ShopManager.csproj.CoreCompileInputs.cache
+F:\C# group assignment\assignment\ShopManager\obj\Debug\ShopManager.exe
+F:\C# group assignment\assignment\ShopManager\obj\Debug\ShopManager.pdb

@@ -28,5 +28,10 @@ namespace ShopManager
             frmRegister.Show();
             this.Hide();
         }
+
+        private void chkLogin_showpass_CheckedChanged(object sender, EventArgs e)
+        {
+            txtLogin_password.PasswordChar = chkLogin_showpass.Checked ? '\0' : '*';
+        }
     }
 }

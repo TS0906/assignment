@@ -105,6 +105,7 @@
             this.chkRegister_showpass.TabIndex = 15;
             this.chkRegister_showpass.Text = "Show password";
             this.chkRegister_showpass.UseVisualStyleBackColor = true;
+            this.chkRegister_showpass.CheckedChanged += new System.EventHandler(this.chkRegister_showpass_CheckedChanged);
             // 
             // textBox2
             // 
@@ -214,7 +215,7 @@
             this.Controls.Add(this.close);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmRegister";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRegister";
