@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "F:\\New\\assignment\\ShopManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|f:\\new\\assignment\\shopmanager\\frmregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|solutionrelative:frmregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|f:\\new\\assignment\\shopmanager\\frmmainshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|solutionrelative:frmmainshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|F:\\New\\assignment\\ShopManager\\frmregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|solutionrelative:frmregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|f:\\new\\assignment\\shopmanager\\frmmainshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|solutionrelative:frmmainshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|F:\\New\\assignment\\ShopManager\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,27 +34,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmRegister.cs",
-              "DocumentMoniker": "F:\\New\\assignment\\ShopManager\\frmRegister.cs",
-              "RelativeDocumentMoniker": "frmRegister.cs",
-              "ToolTip": "F:\\New\\assignment\\ShopManager\\frmRegister.cs",
-              "RelativeToolTip": "frmRegister.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAA3wDYAAABPAAAA",
+              "DocumentIndex": 1,
+              "Title": "frmMainShop.cs",
+              "DocumentMoniker": "F:\\New\\assignment\\ShopManager\\frmMainShop.cs",
+              "RelativeDocumentMoniker": "frmMainShop.cs",
+              "ToolTip": "F:\\New\\assignment\\ShopManager\\frmMainShop.cs",
+              "RelativeToolTip": "frmMainShop.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAAAC0AAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T15:36:06.052Z",
+              "WhenOpened": "2024-11-09T09:11:14.444Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmRegister.cs [Design]",
-              "DocumentMoniker": "F:\\New\\assignment\\ShopManager\\frmRegister.cs",
-              "RelativeDocumentMoniker": "frmRegister.cs",
-              "ToolTip": "F:\\New\\assignment\\ShopManager\\frmRegister.cs [Design]",
-              "RelativeToolTip": "frmRegister.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "frmMainShop.cs [Design]",
+              "DocumentMoniker": "F:\\New\\assignment\\ShopManager\\frmMainShop.cs",
+              "RelativeDocumentMoniker": "frmMainShop.cs",
+              "ToolTip": "F:\\New\\assignment\\ShopManager\\frmMainShop.cs [Design]",
+              "RelativeToolTip": "frmMainShop.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T15:22:18.732Z"
+              "WhenOpened": "2024-11-09T09:09:20.526Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -65,7 +66,8 @@
               "ToolTip": "F:\\New\\assignment\\ShopManager\\frmLogin.cs [Design]",
               "RelativeToolTip": "frmLogin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T15:04:25.051Z"
+              "WhenOpened": "2024-11-07T15:04:25.051Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -75,9 +77,10 @@
               "RelativeDocumentMoniker": "frmLogin.cs",
               "ToolTip": "F:\\New\\assignment\\ShopManager\\frmLogin.cs",
               "RelativeToolTip": "frmLogin.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAwB8AAAAJAAAA",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAAAFAAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T15:36:16.089Z"
+              "WhenOpened": "2024-11-07T15:36:16.089Z",
+              "EditorCaption": ""
             }
           ]
         }

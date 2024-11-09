@@ -54,12 +54,33 @@ namespace ShopManager
 
             if (CheckCredentials(username, password))
             {
-                MessageBox.Show("Đăng nhập thành công!");
+                frmMainShop frmMainShop = new frmMainShop();
+                frmMainShop.Show();
+                this.Hide();
             }
             else
             {
                 MessageBox.Show("Tên đăng nhập hoặc mật khẩu không chính xác.");
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal) {
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;  
+            }
+        }
+        //Maximize window application
+
+        private void lblMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+        //Minimize window application
+
     }
 }

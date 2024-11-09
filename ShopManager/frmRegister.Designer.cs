@@ -43,6 +43,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtRegister_password = new System.Windows.Forms.TextBox();
             this.txtRegister_rpassword = new System.Windows.Forms.TextBox();
+            this.lblMinimize = new System.Windows.Forms.Label();
+            this.lblMaximize = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +61,7 @@
             // 
             // btnRegister_login
             // 
+            this.btnRegister_login.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRegister_login.BackColor = System.Drawing.Color.DarkOrange;
             this.btnRegister_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegister_login.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -73,6 +76,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Transparent;
@@ -84,6 +88,7 @@
             // 
             // btnRegister
             // 
+            this.btnRegister.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRegister.BackColor = System.Drawing.Color.DarkOrange;
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegister.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -98,6 +103,7 @@
             // 
             // chkRegister_showpass
             // 
+            this.chkRegister_showpass.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chkRegister_showpass.AutoSize = true;
             this.chkRegister_showpass.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkRegister_showpass.Location = new System.Drawing.Point(454, 367);
@@ -118,6 +124,7 @@
             // 
             // txtRegister_username
             // 
+            this.txtRegister_username.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtRegister_username.Location = new System.Drawing.Point(454, 193);
             this.txtRegister_username.Name = "txtRegister_username";
             this.txtRegister_username.Size = new System.Drawing.Size(297, 30);
@@ -125,6 +132,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(450, 168);
             this.label4.Name = "label4";
@@ -134,6 +142,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(450, 237);
             this.label3.Name = "label3";
@@ -143,6 +152,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(448, 103);
@@ -157,9 +167,9 @@
             this.close.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.close.Location = new System.Drawing.Point(773, 0);
             this.close.Name = "close";
-            this.close.Size = new System.Drawing.Size(23, 23);
+            this.close.Size = new System.Drawing.Size(20, 23);
             this.close.TabIndex = 9;
-            this.close.Text = "X";
+            this.close.Text = "x";
             this.close.Click += new System.EventHandler(this.close_Click);
             // 
             // label6
@@ -173,6 +183,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(450, 306);
             this.label7.Name = "label7";
@@ -182,6 +193,7 @@
             // 
             // txtRegister_password
             // 
+            this.txtRegister_password.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtRegister_password.Location = new System.Drawing.Point(454, 262);
             this.txtRegister_password.Name = "txtRegister_password";
             this.txtRegister_password.PasswordChar = '*';
@@ -190,17 +202,44 @@
             // 
             // txtRegister_rpassword
             // 
+            this.txtRegister_rpassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtRegister_rpassword.Location = new System.Drawing.Point(454, 331);
             this.txtRegister_rpassword.Name = "txtRegister_rpassword";
             this.txtRegister_rpassword.PasswordChar = '*';
             this.txtRegister_rpassword.Size = new System.Drawing.Size(297, 30);
             this.txtRegister_rpassword.TabIndex = 14;
             // 
+            // lblMinimize
+            // 
+            this.lblMinimize.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblMinimize.AutoSize = true;
+            this.lblMinimize.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMinimize.Location = new System.Drawing.Point(724, 0);
+            this.lblMinimize.Name = "lblMinimize";
+            this.lblMinimize.Size = new System.Drawing.Size(17, 23);
+            this.lblMinimize.TabIndex = 18;
+            this.lblMinimize.Text = "-";
+            this.lblMinimize.Click += new System.EventHandler(this.lblMinimize_Click);
+            // 
+            // lblMaximize
+            // 
+            this.lblMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMaximize.AutoSize = true;
+            this.lblMaximize.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaximize.Location = new System.Drawing.Point(747, 0);
+            this.lblMaximize.Name = "lblMaximize";
+            this.lblMaximize.Size = new System.Drawing.Size(20, 23);
+            this.lblMaximize.TabIndex = 17;
+            this.lblMaximize.Text = "o";
+            this.lblMaximize.Click += new System.EventHandler(this.label1_Click);
+            // 
             // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(796, 540);
+            this.Controls.Add(this.lblMinimize);
+            this.Controls.Add(this.lblMaximize);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.chkRegister_showpass);
@@ -244,5 +283,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtRegister_password;
         private System.Windows.Forms.TextBox txtRegister_rpassword;
+        private System.Windows.Forms.Label lblMinimize;
+        private System.Windows.Forms.Label lblMaximize;
     }
 }

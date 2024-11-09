@@ -64,5 +64,23 @@ namespace ShopManager
 
             SaveCredentials(username, password);
         }
+        private void label1_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
+        //Maximize window application
+
+        private void lblMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+        //Minimize window application
     }
 }

@@ -31,3 +31,4 @@ F:\New\assignment\ShopManager\obj\Debug\ShopManager.csproj.GenerateResource.cach
 F:\New\assignment\ShopManager\obj\Debug\ShopManager.csproj.CoreCompileInputs.cache
 F:\New\assignment\ShopManager\obj\Debug\ShopManager.exe
 F:\New\assignment\ShopManager\obj\Debug\ShopManager.pdb
+F:\New\assignment\ShopManager\obj\Debug\ShopManager.frmMainShop.resources
