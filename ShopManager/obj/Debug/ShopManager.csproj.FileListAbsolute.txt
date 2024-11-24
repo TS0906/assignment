@@ -32,3 +32,15 @@ F:\New\assignment\ShopManager\obj\Debug\ShopManager.csproj.CoreCompileInputs.cac
 F:\New\assignment\ShopManager\obj\Debug\ShopManager.exe
 F:\New\assignment\ShopManager\obj\Debug\ShopManager.pdb
 F:\New\assignment\ShopManager\obj\Debug\ShopManager.frmMainShop.resources
+F:\repo\ShopManager\bin\Debug\ShopManager.exe.config
+F:\repo\ShopManager\bin\Debug\ShopManager.exe
+F:\repo\ShopManager\bin\Debug\ShopManager.pdb
+F:\repo\ShopManager\obj\Debug\ShopManager.csproj.AssemblyReference.cache
+F:\repo\ShopManager\obj\Debug\ShopManager.frmLogin.resources
+F:\repo\ShopManager\obj\Debug\ShopManager.frmMainShop.resources
+F:\repo\ShopManager\obj\Debug\ShopManager.frmRegister.resources
+F:\repo\ShopManager\obj\Debug\ShopManager.Properties.Resources.resources
+F:\repo\ShopManager\obj\Debug\ShopManager.csproj.GenerateResource.cache
+F:\repo\ShopManager\obj\Debug\ShopManager.csproj.CoreCompileInputs.cache
+F:\repo\ShopManager\obj\Debug\ShopManager.exe
+F:\repo\ShopManager\obj\Debug\ShopManager.pdb
