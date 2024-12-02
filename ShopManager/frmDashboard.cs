@@ -8,19 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace ShopManager
 {
     public partial class frmDashboard : Form
     {
         public frmDashboard()
         {
+            InitializeComponent();
             InitializeDashboard();
         }
+
         private void CreateSummaryCard(Panel parent, string title, string value, string subtitle, Color color, int position)
         {
-            // Tính toán chiều rộng của mỗi thẻ
-            int cardWidth = (parent.Width - (5 * 10)) / 4; // Chừa khoảng cách giữa các thẻ
+            // Calculate card width
+            int cardWidth = Math.Max(0, (parent.Width - (5 * 10)) / 4);
+
             Panel card = new Panel
             {
                 Width = cardWidth,
@@ -61,7 +63,7 @@ namespace ShopManager
         {
             this.BackColor = Color.White;
 
-            // Tạo panel chứa thẻ tóm tắt
+            // Create summary panel
             Panel pnlSummary = new Panel
             {
                 Dock = DockStyle.Top,
@@ -69,57 +71,51 @@ namespace ShopManager
                 Padding = new Padding(10)
             };
 
-            this.Controls.Add(pnlSummary); // Thêm panel vào form
+            this.Controls.Add(pnlSummary);
 
-            // Xử lý căn chỉnh lại các thẻ khi panel thay đổi kích thước
+            // Handle panel resize to reposition cards
             pnlSummary.Resize += (s, e) =>
             {
-                pnlSummary.Controls.Clear(); // Xóa các thẻ cũ (tránh trùng lặp)
-                CreateSummaryCard(pnlSummary, "Total Sales", "$15,750", "Today", Color.FromArgb(52, 152, 219), 0);
-                CreateSummaryCard(pnlSummary, "Total Orders", "245", "Today", Color.FromArgb(46, 204, 113), 1);
-                CreateSummaryCard(pnlSummary, "Total Products", "1,250", "In Stock", Color.FromArgb(155, 89, 182), 2);
-                CreateSummaryCard(pnlSummary, "Total Customers", "864", "Active", Color.FromArgb(230, 126, 34), 3);
-            };
+                pnlSummary.Controls.Clear(); // Xóa các thẻ (card) hiện tại
 
-            pnlSummary.OnResize(EventArgs.Empty); // Kích hoạt căn chỉnh ngay khi khởi tạo
+                // Lấy dữ liệu dashboard thực tế
+                var salesData = FetchTotalSales();
+                var ordersData = FetchTotalOrders();
+                var productsData = FetchTotalProducts();
+                var customersData = FetchTotalCustomers();
+
+                // Tạo các thẻ với dữ liệu động
+                CreateSummaryCard(pnlSummary, "Total Sales", $"${salesData:N0}", "Today", Color.FromArgb(52, 152, 219), 0);
+                CreateSummaryCard(pnlSummary, "Total Orders", ordersData.ToString(), "Today", Color.FromArgb(46, 204, 113), 1);
+                CreateSummaryCard(pnlSummary, "Total Products", productsData.ToString(), "In Stock", Color.FromArgb(155, 89, 182), 2);
+                CreateSummaryCard(pnlSummary, "Total Customers", customersData.ToString(), "Active", Color.FromArgb(230, 126, 34), 3);
+            };
+            pnlSummary.Resize += (s, e) => pnlSummary.Invalidate(); // Kích hoạt sự kiện `Resize`
         }
 
-        private void CreateSummaryCard(Panel parent, string title, string value, string subtitle, Color color, int position)
+        // Placeholder methods for data retrieval   
+        private decimal FetchTotalSales()
         {
-            Panel card = new Panel
-            {
-                Width = (parent.Width - 50) / 4,
-                Height = parent.Height - 20,
-                BackColor = color,
-                Location = new Point((card.Width + 10) * position + 10, 10)
-            };
+            // Replace with actual database or service call
+            return 15750;
+        }
 
-            Label lblTitle = new Label
-            {
-                Text = title,
-                ForeColor = Color.White,
-                Font = new Font("Times New Roman", 12),
-                Location = new Point(10, 10)
-            };
+        private int FetchTotalOrders()
+        {
+            // Replace with actual database or service call
+            return 245;
+        }
 
-            Label lblValue = new Label
-            {
-                Text = value,
-                ForeColor = Color.White,
-                Font = new Font("Times New Roman", 20, FontStyle.Bold),
-                Location = new Point(10, 35)
-            };
+        private int FetchTotalProducts()
+        {
+            // Replace with actual database or service call
+            return 1250;
+        }
 
-            Label lblSubtitle = new Label
-            {
-                Text = subtitle,
-                ForeColor = Color.White,
-                Font = new Font("Times New Roman", 10),
-                Location = new Point(10, 70)
-            };
-
-            card.Controls.AddRange(new Control[] { lblTitle, lblValue, lblSubtitle });
-            parent.Controls.Add(card);
+        private int FetchTotalCustomers()
+        {
+            // Replace with actual database or service call
+            return 864;
         }
     }
 }
