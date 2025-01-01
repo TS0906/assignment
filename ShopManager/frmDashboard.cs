@@ -96,25 +96,21 @@ namespace ShopManager
         // Placeholder methods for data retrieval   
         private decimal FetchTotalSales()
         {
-            // Replace with actual database or service call
             return 15750;
         }
 
         private int FetchTotalOrders()
         {
-            // Replace with actual database or service call
             return 245;
         }
 
         private int FetchTotalProducts()
         {
-            // Replace with actual database or service call
             return 1250;
         }
 
         private int FetchTotalCustomers()
         {
-            // Replace with actual database or service call
             return 864;
         }
     }

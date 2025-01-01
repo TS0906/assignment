@@ -115,23 +115,23 @@ namespace ShopManager
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmDashboard()); // Mở form frmDashboard khi nhấn Button1
+            OpenChildForm(new frmDashboard()); 
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmProducts()); // Mở form frmProducts khi nhấn Button2
+            OpenChildForm(new frmProducts()); 
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmInventory()); // Mở form frmInventory khi nhấn Button3
+            OpenChildForm(new frmInventory()); 
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmSales()); // Mở form frmSales khi nhấn Button4
+            OpenChildForm(new frmSales()); 
         }
         private void button5_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmReports()); // Mở form frmReports khi nhấn Button5
+            OpenChildForm(new frmReports()); 
         }
         private void OpenChildForm(Form childForm)
         {

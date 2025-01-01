@@ -15,6 +15,7 @@ namespace ShopManager
         public frmSales()
         {
             InitializeComponent();
+            InitializeSales();
         }
         private void InitializeSales()
         {
