@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "F:\\repo\\ShopManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|F:\\repo\\ShopManager\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|f:\\repo\\shopmanager\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|solutionrelative:frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|F:\\repo\\ShopManager\\frmmainshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|solutionrelative:frmmainshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|F:\\repo\\ShopManager\\frminventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,12 +15,12 @@
       "RelativeMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|solutionrelative:frmproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|F:\\repo\\ShopManager\\frmreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|solutionrelative:frmreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|F:\\repo\\ShopManager\\frmmainshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|solutionrelative:frmmainshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|f:\\repo\\shopmanager\\frmsales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|solutionrelative:frmsales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|F:\\repo\\ShopManager\\frmreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|solutionrelative:frmreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|F:\\repo\\ShopManager\\frmmainshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -38,21 +34,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "frmSales.cs",
-              "DocumentMoniker": "F:\\repo\\ShopManager\\frmSales.cs",
-              "RelativeDocumentMoniker": "frmSales.cs",
-              "ToolTip": "F:\\repo\\ShopManager\\frmSales.cs",
-              "RelativeToolTip": "frmSales.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T09:07:46.969Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
@@ -71,12 +54,11 @@
               "RelativeToolTip": "frmReports.cs",
               "ViewState": "AgIAAHIAAAAAAAAAAAAQwKgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T09:57:21.851Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-01T09:57:21.851Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "frmInventory.cs",
               "DocumentMoniker": "F:\\repo\\ShopManager\\frmInventory.cs",
               "RelativeDocumentMoniker": "frmInventory.cs",
@@ -89,7 +71,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "frmProducts.cs",
               "DocumentMoniker": "F:\\repo\\ShopManager\\frmProducts.cs",
               "RelativeDocumentMoniker": "frmProducts.cs",
@@ -108,14 +90,14 @@
               "RelativeDocumentMoniker": "frmDashboard.cs",
               "ToolTip": "F:\\repo\\ShopManager\\frmDashboard.cs",
               "RelativeToolTip": "frmDashboard.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAYwHAAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-01T09:53:36.726Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "frmMainShop.cs",
               "DocumentMoniker": "F:\\repo\\ShopManager\\frmMainShop.cs",
               "RelativeDocumentMoniker": "frmMainShop.cs",
@@ -123,20 +105,18 @@
               "RelativeToolTip": "frmMainShop.cs",
               "ViewState": "AgIAAEgAAAAAAAAAAAAYwHUAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T09:53:25.315Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-01T09:53:25.315Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "frmMainShop.cs [Design]",
               "DocumentMoniker": "F:\\repo\\ShopManager\\frmMainShop.cs",
               "RelativeDocumentMoniker": "frmMainShop.cs",
               "ToolTip": "F:\\repo\\ShopManager\\frmMainShop.cs [Design]",
               "RelativeToolTip": "frmMainShop.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T09:53:09.399Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-01T09:53:09.399Z"
             }
           ]
         }

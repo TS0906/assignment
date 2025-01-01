@@ -36,7 +36,8 @@ namespace ShopManager
                 Text = title,
                 ForeColor = Color.White,
                 Font = new Font("Times New Roman", 12),
-                Location = new Point(10, 10)
+                Location = new Point(10, 10),
+                Width = cardWidth - 20
             };
 
             Label lblValue = new Label
@@ -44,7 +45,10 @@ namespace ShopManager
                 Text = value,
                 ForeColor = Color.White,
                 Font = new Font("Times New Roman", 20, FontStyle.Bold),
-                Location = new Point(10, 35)
+                Width = cardWidth - 20,
+                Height = 35,
+                Location = new Point(10, 35),
+                TextAlign = ContentAlignment.MiddleLeft
             };
 
             Label lblSubtitle = new Label
@@ -52,7 +56,8 @@ namespace ShopManager
                 Text = subtitle,
                 ForeColor = Color.White,
                 Font = new Font("Times New Roman", 10),
-                Location = new Point(10, 70)
+                Location = new Point(10, 70),
+                Width = cardWidth - 20
             };
 
             card.Controls.AddRange(new Control[] { lblTitle, lblValue, lblSubtitle });
@@ -85,7 +90,7 @@ namespace ShopManager
                 var customersData = FetchTotalCustomers();
 
                 // Tạo các thẻ với dữ liệu động
-                CreateSummaryCard(pnlSummary, "Total Sales", $"${salesData:N0}", "Today", Color.FromArgb(52, 152, 219), 0);
+                CreateSummaryCard(pnlSummary, "Total Sales", salesData.ToString(), "Today", Color.FromArgb(52, 152, 219), 0);
                 CreateSummaryCard(pnlSummary, "Total Orders", ordersData.ToString(), "Today", Color.FromArgb(46, 204, 113), 1);
                 CreateSummaryCard(pnlSummary, "Total Products", productsData.ToString(), "In Stock", Color.FromArgb(155, 89, 182), 2);
                 CreateSummaryCard(pnlSummary, "Total Customers", customersData.ToString(), "Active", Color.FromArgb(230, 126, 34), 3);
@@ -93,7 +98,7 @@ namespace ShopManager
             pnlSummary.Resize += (s, e) => pnlSummary.Invalidate(); // Kích hoạt sự kiện `Resize`
         }
 
-        // Placeholder methods for data retrieval   
+        // Placeholder methods for data retrieval later not for this application    
         private decimal FetchTotalSales()
         {
             return 15750;
