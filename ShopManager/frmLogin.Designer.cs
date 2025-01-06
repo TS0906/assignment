@@ -41,12 +41,17 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblMaximize = new System.Windows.Forms.Label();
             this.lblMinimize = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Orange;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnLogin_register);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -194,6 +199,27 @@
             this.lblMinimize.Text = "-";
             this.lblMinimize.Click += new System.EventHandler(this.lblMinimize_Click);
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(99, 258);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(284, 39);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "SHOP MANAGER";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ShopManager.Properties.Resources.logo_orange;
+            this.pictureBox1.Location = new System.Drawing.Point(120, 80);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(177, 161);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -218,6 +244,7 @@
             this.Text = "frmLogin";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,6 +265,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblMaximize;
         private System.Windows.Forms.Label lblMinimize;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

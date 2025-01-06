@@ -14,9 +14,7 @@ namespace ShopManager
     {
         private Button currentButton;
         private Random random;
-        private int tempIndex;
         private Form activeForm;
-
         public frmMainShop()
         {
             InitializeComponent();
@@ -44,12 +42,12 @@ namespace ShopManager
             button6.Text = "LOG OUT";
 
             // Add icons to buttons
-            button1.Image = SystemIcons.Application.ToBitmap();
-            button2.Image = SystemIcons.Shield.ToBitmap();
-            button3.Image = SystemIcons.Information.ToBitmap();
-            button4.Image = SystemIcons.Warning.ToBitmap();
-            button5.Image = SystemIcons.Question.ToBitmap();
-            button6.Image = SystemIcons.Error.ToBitmap();
+            button1.Image = SystemIcons.Application.ToBitmap(); 
+            button2.Image = SystemIcons.Information.ToBitmap(); 
+            button3.Image = SystemIcons.Shield.ToBitmap();      
+            button4.Image = SystemIcons.Warning.ToBitmap();     
+            button5.Image = SystemIcons.Question.ToBitmap();    
+            button6.Image = SystemIcons.Error.ToBitmap();       
 
             // Configure button properties
             foreach (Button btn in panel1.Controls.OfType<Button>())
@@ -90,7 +88,7 @@ namespace ShopManager
         private void Btn_MouseEnter(object sender, EventArgs e)
         {
             Button btn = sender as Button;
-            btn.BackColor = Color.FromArgb(230, 126, 34); // Darker orange
+            btn.BackColor = Color.FromArgb(230, 126, 34);
         }
 
         private void Btn_MouseLeave(object sender, EventArgs e)
@@ -111,7 +109,6 @@ namespace ShopManager
             btn.BackColor = Color.FromArgb(230, 126, 34);
 
             // Handle button clicks here
-            // For example: OpenChildForm(new frmProducts());
         }
         private void button1_Click(object sender, EventArgs e)
         {
