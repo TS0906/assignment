@@ -82,6 +82,7 @@ namespace ShopManager
                 BackColor = Color.FromArgb(46, 204, 113),
                 ForeColor = Color.White
             };
+            btnAddProduct.Click += BtnAddProduct_Click;
 
             Button btnEditProduct = new Button
             {
@@ -91,6 +92,7 @@ namespace ShopManager
                 BackColor = Color.FromArgb(52, 152, 219),
                 ForeColor = Color.White
             };
+            btnEditProduct.Click += BtnEditProduct_Click;
 
             Button btnDeleteProduct = new Button
             {
@@ -100,10 +102,103 @@ namespace ShopManager
                 BackColor = Color.FromArgb(231, 76, 60),
                 ForeColor = Color.White
             };
+            btnDeleteProduct.Click += BtnDeleteProduct_Click;
 
             pnlActions.Controls.AddRange(new Control[] { btnAddProduct, btnEditProduct, btnDeleteProduct });
 
             return pnlActions;
+        }
+
+        private void BtnAddProduct_Click(object sender, EventArgs e)
+        {
+            using (Form frmAdd = new Form())
+            {
+                frmAdd.Text = "Add Product";
+                frmAdd.Size = new Size(400, 300);
+
+                Label lblProductID = new Label { Text = "Product ID:", Location = new Point(10, 20) };
+                TextBox txtProductID = new TextBox { Location = new Point(120, 20), Width = 200 };
+
+                Label lblProductName = new Label { Text = "Product Name:", Location = new Point(10, 60) };
+                TextBox txtProductName = new TextBox { Location = new Point(120, 60), Width = 200 };
+
+                Label lblCategory = new Label { Text = "Category:", Location = new Point(10, 100) };
+                TextBox txtCategory = new TextBox { Location = new Point(120, 100), Width = 200 };
+
+                Label lblPrice = new Label { Text = "Price:", Location = new Point(10, 140) };
+                TextBox txtPrice = new TextBox { Location = new Point(120, 140), Width = 200 };
+
+                Label lblStock = new Label { Text = "Stock:", Location = new Point(10, 180) };
+                TextBox txtStock = new TextBox { Location = new Point(120, 180), Width = 200 };
+
+                Button btnSave = new Button { Text = "Save", Location = new Point(120, 220), Size = new Size(80, 30) };
+                btnSave.Click += (s, args) =>
+                {
+                    dgvProducts.Rows.Add(txtProductID.Text, txtProductName.Text, txtCategory.Text, txtPrice.Text, txtStock.Text);
+                    frmAdd.Close();
+                };
+
+                frmAdd.Controls.AddRange(new Control[] { lblProductID, txtProductID, lblProductName, txtProductName, lblCategory, txtCategory, lblPrice, txtPrice, lblStock, txtStock, btnSave });
+                frmAdd.ShowDialog();
+            }
+        }
+
+        private void BtnEditProduct_Click(object sender, EventArgs e)
+        {
+            if (dgvProducts.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a product to edit.");
+                return;
+            }
+
+            DataGridViewRow selectedRow = dgvProducts.SelectedRows[0];
+
+            using (Form frmEdit = new Form())
+            {
+                frmEdit.Text = "Edit Product";
+                frmEdit.Size = new Size(400, 300);
+
+                Label lblProductID = new Label { Text = "Product ID:", Location = new Point(10, 20) };
+                TextBox txtProductID = new TextBox { Location = new Point(120, 20), Width = 200, Text = selectedRow.Cells["ProductID"].Value.ToString() };
+
+                Label lblProductName = new Label { Text = "Product Name:", Location = new Point(10, 60) };
+                TextBox txtProductName = new TextBox { Location = new Point(120, 60), Width = 200, Text = selectedRow.Cells["ProductName"].Value.ToString() };
+
+                Label lblCategory = new Label { Text = "Category:", Location = new Point(10, 100) };
+                TextBox txtCategory = new TextBox { Location = new Point(120, 100), Width = 200, Text = selectedRow.Cells["Category"].Value.ToString() };
+
+                Label lblPrice = new Label { Text = "Price:", Location = new Point(10, 140) };
+                TextBox txtPrice = new TextBox { Location = new Point(120, 140), Width = 200, Text = selectedRow.Cells["Price"].Value.ToString() };
+
+                Label lblStock = new Label { Text = "Stock:", Location = new Point(10, 180) };
+                TextBox txtStock = new TextBox { Location = new Point(120, 180), Width = 200, Text = selectedRow.Cells["Stock"].Value.ToString() };
+
+                Button btnSave = new Button { Text = "Save", Location = new Point(120, 220), Size = new Size(80, 30) };
+                btnSave.Click += (s, args) =>
+                {
+                    selectedRow.SetValues(txtProductID.Text, txtProductName.Text, txtCategory.Text, txtPrice.Text, txtStock.Text);
+                    frmEdit.Close();
+                };
+
+                frmEdit.Controls.AddRange(new Control[] { lblProductID, txtProductID, lblProductName, txtProductName, lblCategory, txtCategory, lblPrice, txtPrice, lblStock, txtStock, btnSave });
+                frmEdit.ShowDialog();
+            }
+        }
+
+        private void BtnDeleteProduct_Click(object sender, EventArgs e)
+        {
+            if (dgvProducts.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a product to delete.");
+                return;
+            }
+
+            var result = MessageBox.Show("Are you sure you want to delete this product?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                dgvProducts.Rows.RemoveAt(dgvProducts.SelectedRows[0].Index);
+            }
         }
 
         private void PopulateSampleProducts()

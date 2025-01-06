@@ -78,25 +78,37 @@ namespace ShopManager
                 BackColor = Color.FromArgb(241, 241, 241)
             };
 
-            Button btnRestock = new Button
+            Button btnAddProduct = new Button
             {
-                Text = "Restock",
+                Text = "Add Product",
                 Location = new Point(10, 10),
                 Size = new Size(120, 30),
                 BackColor = Color.FromArgb(46, 204, 113),
                 ForeColor = Color.White
             };
+            btnAddProduct.Click += BtnAddProduct_Click;
 
-            Button btnAdjustStock = new Button
+            Button btnEditProduct = new Button
             {
-                Text = "Adjust Stock",
+                Text = "Edit Product",
                 Location = new Point(140, 10),
                 Size = new Size(120, 30),
                 BackColor = Color.FromArgb(52, 152, 219),
                 ForeColor = Color.White
             };
+            btnEditProduct.Click += BtnEditProduct_Click;
 
-            pnlActions.Controls.AddRange(new Control[] { btnRestock, btnAdjustStock });
+            Button btnDeleteProduct = new Button
+            {
+                Text = "Delete Product",
+                Location = new Point(270, 10),
+                Size = new Size(120, 30),
+                BackColor = Color.FromArgb(231, 76, 60),
+                ForeColor = Color.White
+            };
+            btnDeleteProduct.Click += BtnDeleteProduct_Click;
+
+            pnlActions.Controls.AddRange(new Control[] { btnAddProduct, btnEditProduct, btnDeleteProduct });
 
             return pnlActions;
         }
@@ -136,5 +148,109 @@ namespace ShopManager
             dgvInventory.Rows.Add("PRD-003", "Smart Watch", "75", "Yes", "2024-11-20");
             dgvInventory.Rows.Add("PRD-004", "Bluetooth Speaker", "20", "Yes", "2024-11-10");
         }
+
+        private void BtnAddProduct_Click(object sender, EventArgs e)
+        {
+            using (Form frmAdd = new Form())
+            {
+                frmAdd.Text = "Add Product";
+                frmAdd.Size = new Size(400, 300);
+
+                TextBox txtID = CreateTextBox("Product ID", 10);
+                TextBox txtName = CreateTextBox("Product Name", 50);
+                TextBox txtStock = CreateTextBox("Total Stock", 90);
+                TextBox txtLowStock = CreateTextBox("Low Stock Alert", 130);
+                TextBox txtRestock = CreateTextBox("Last Restocked", 170);
+
+                Button btnSave = new Button { Text = "Save", Dock = DockStyle.Bottom, Height = 40 };
+                btnSave.Click += (s, ev) =>
+                {
+                    dgvInventory.Rows.Add(txtID.Text, txtName.Text, txtStock.Text, txtLowStock.Text, txtRestock.Text);
+                    frmAdd.Close();
+                };
+
+                frmAdd.Controls.AddRange(new Control[] { txtID, txtName, txtStock, txtLowStock, txtRestock, btnSave });
+                frmAdd.ShowDialog();
+            }
+        }
+
+        private void BtnEditProduct_Click(object sender, EventArgs e)
+        {
+            if (dgvInventory.CurrentRow == null)
+            {
+                MessageBox.Show("Please select a product to edit.", "Edit Product", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            using (Form frmEdit = new Form())
+            {
+                frmEdit.Text = "Edit Product";
+                frmEdit.Size = new Size(400, 300);
+
+                DataGridViewRow row = dgvInventory.CurrentRow;
+
+                TextBox txtID = CreateTextBox("Product ID", 10, row.Cells["ProductID"].Value.ToString());
+                TextBox txtName = CreateTextBox("Product Name", 50, row.Cells["ProductName"].Value.ToString());
+                TextBox txtStock = CreateTextBox("Total Stock", 90, row.Cells["TotalStock"].Value.ToString());
+                TextBox txtLowStock = CreateTextBox("Low Stock Alert", 130, row.Cells["LowStockAlert"].Value.ToString());
+                TextBox txtRestock = CreateTextBox("Last Restocked", 170, row.Cells["LastRestocked"].Value.ToString());
+
+                Button btnSave = new Button { Text = "Save", Dock = DockStyle.Bottom, Height = 40 };
+                btnSave.Click += (s, ev) =>
+                {
+                    row.SetValues(txtID.Text, txtName.Text, txtStock.Text, txtLowStock.Text, txtRestock.Text);
+                    frmEdit.Close();
+                };
+
+                frmEdit.Controls.AddRange(new Control[] { txtID, txtName, txtStock, txtLowStock, txtRestock, btnSave });
+                frmEdit.ShowDialog();
+            }
+        }
+
+        private void BtnDeleteProduct_Click(object sender, EventArgs e)
+        {
+            if (dgvInventory.CurrentRow == null)
+            {
+                MessageBox.Show("Please select a product to delete.", "Delete Product", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (MessageBox.Show("Are you sure you want to delete this product?", "Delete Product", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                dgvInventory.Rows.Remove(dgvInventory.CurrentRow);
+            }
+        }
+
+        private TextBox CreateTextBox(string placeholder, int top, string defaultValue = "")
+        {
+            TextBox textBox = new TextBox
+            {
+                Text = string.IsNullOrEmpty(defaultValue) ? placeholder : defaultValue,
+                ForeColor = string.IsNullOrEmpty(defaultValue) ? Color.Gray : Color.Black,
+                Location = new Point(10, top),
+                Width = 360
+            };
+
+            textBox.Enter += (s, e) =>
+            {
+                if (textBox.Text == placeholder && textBox.ForeColor == Color.Gray)
+                {
+                    textBox.Text = "";
+                    textBox.ForeColor = Color.Black;
+                }
+            };
+
+            textBox.Leave += (s, e) =>
+            {
+                if (string.IsNullOrEmpty(textBox.Text))
+                {
+                    textBox.Text = placeholder;
+                    textBox.ForeColor = Color.Gray;
+                }
+            };
+
+            return textBox;
+        }
+
     }
 }

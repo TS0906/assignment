@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Drawing.Printing;
 
 namespace ShopManager
 {
@@ -19,11 +21,11 @@ namespace ShopManager
 
         private void InitializeComponent()
         {
+            // Previous initialization code remains the same until CreateActionPanel
             this.Text = "Reports";
             this.BackColor = Color.White;
             this.Size = new Size(800, 600);
 
-            // Title Label
             Label lblTitle = new Label
             {
                 Text = "Business Reports",
@@ -33,30 +35,28 @@ namespace ShopManager
                 Height = 50
             };
 
-            // Tab Control for Reports
             tabReports = new TabControl
             {
                 Dock = DockStyle.Fill
             };
 
-            // Sales Report Tab
             TabPage tabSalesReport = CreateSalesReportTab();
             TabPage tabInventoryReport = CreateInventoryReportTab();
             TabPage tabCustomerReport = CreateCustomerReportTab();
 
             tabReports.TabPages.AddRange(new TabPage[] { tabSalesReport, tabInventoryReport, tabCustomerReport });
 
-            // Action Panel
             Panel pnlActions = CreateActionPanel();
 
-            // Add Controls
             this.Controls.Add(tabReports);
             this.Controls.Add(pnlActions);
             this.Controls.Add(lblTitle);
         }
 
+        // Previous tab creation methods remain the same
         private TabPage CreateSalesReportTab()
         {
+            // Existing implementation remains unchanged
             TabPage tabSales = new TabPage("Sales Report");
             DataGridView dgvSales = new DataGridView
             {
@@ -84,6 +84,7 @@ namespace ShopManager
 
         private TabPage CreateInventoryReportTab()
         {
+            // Existing implementation remains unchanged
             TabPage tabInventory = new TabPage("Inventory Report");
             DataGridView dgvInventory = new DataGridView
             {
@@ -111,6 +112,7 @@ namespace ShopManager
 
         private TabPage CreateCustomerReportTab()
         {
+            // Existing implementation remains unchanged
             TabPage tabCustomers = new TabPage("Customer Report");
             DataGridView dgvCustomers = new DataGridView
             {
@@ -152,6 +154,7 @@ namespace ShopManager
                 BackColor = Color.FromArgb(52, 152, 219),
                 ForeColor = Color.White
             };
+            btnExportReport.Click += BtnExportReport_Click;
 
             Button btnPrintReport = new Button
             {
@@ -161,10 +164,191 @@ namespace ShopManager
                 BackColor = Color.FromArgb(46, 204, 113),
                 ForeColor = Color.White
             };
+            btnPrintReport.Click += BtnPrintReport_Click;
 
             pnlActions.Controls.AddRange(new Control[] { btnExportReport, btnPrintReport });
 
             return pnlActions;
+        }
+
+        private void BtnExportReport_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DataGridView currentGrid = GetCurrentDataGridView();
+                if (currentGrid == null) return;
+
+                SaveFileDialog saveDialog = new SaveFileDialog
+                {
+                    Filter = "CSV files (*.csv)|*.csv|Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*",
+                    FilterIndex = 1,
+                    RestoreDirectory = true
+                };
+
+                if (saveDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string extension = Path.GetExtension(saveDialog.FileName).ToLower();
+
+                    if (extension == ".csv")
+                    {
+                        ExportToCSV(currentGrid, saveDialog.FileName);
+                    }
+                    else if (extension == ".xlsx")
+                    {
+                        ExportToExcel(currentGrid, saveDialog.FileName);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Export failed: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnPrintReport_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DataGridView currentGrid = GetCurrentDataGridView();
+                if (currentGrid == null) return;
+
+                PrintDocument printDoc = new PrintDocument();
+                printDoc.PrintPage += (s, ev) => PrintPage(s, ev, currentGrid);
+
+                PrintPreviewDialog preview = new PrintPreviewDialog
+                {
+                    Document = printDoc,
+                    WindowState = FormWindowState.Maximized
+                };
+
+                if (preview.ShowDialog() == DialogResult.OK)
+                {
+                    PrintDialog printDialog = new PrintDialog
+                    {
+                        Document = printDoc,
+                        UseEXDialog = true
+                    };
+
+                    if (printDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        printDoc.Print();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Printing failed: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private DataGridView GetCurrentDataGridView()
+        {
+            if (tabReports.SelectedTab == null)
+            {
+                MessageBox.Show("Please select a report tab first.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return null;
+            }
+
+            return tabReports.SelectedTab.Controls.OfType<DataGridView>().FirstOrDefault();
+        }
+
+        private void ExportToCSV(DataGridView grid, string filename)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            // Add headers
+            string[] headers = grid.Columns.Cast<DataGridViewColumn>()
+                                         .Select(column => column.HeaderText)
+                                         .ToArray();
+            sb.AppendLine(string.Join(",", headers));
+
+            // Add rows
+            foreach (DataGridViewRow row in grid.Rows)
+            {
+                string[] cells = row.Cells.Cast<DataGridViewCell>()
+                                        .Select(cell => cell.Value?.ToString() ?? "")
+                                        .Select(cell => cell.Contains(",") ? $"\"{cell}\"" : cell)
+                                        .ToArray();
+                sb.AppendLine(string.Join(",", cells));
+            }
+
+            File.WriteAllText(filename, sb.ToString());
+            MessageBox.Show("Export completed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void ExportToExcel(DataGridView grid, string filename)
+        {
+            // Note: This is a placeholder for Excel export functionality
+            // You would typically use a library like EPPlus or Microsoft.Office.Interop.Excel
+            MessageBox.Show("Excel export functionality requires additional libraries. Please implement using your preferred Excel library.",
+                          "Not Implemented",
+                          MessageBoxButtons.OK,
+                          MessageBoxIcon.Information);
+        }
+
+        private void PrintPage(object sender, PrintPageEventArgs e, DataGridView grid)
+        {
+            // Page settings
+            float leftMargin = e.MarginBounds.Left;
+            float topMargin = e.MarginBounds.Top;
+            float availableWidth = e.MarginBounds.Width;
+            float availableHeight = e.MarginBounds.Height;
+
+            // Print title
+            string title = tabReports.SelectedTab.Text;
+            using (Font titleFont = new Font("Times New Roman", 14, FontStyle.Bold))
+            {
+                e.Graphics.DrawString(title, titleFont, Brushes.Black, leftMargin, topMargin);
+                topMargin += titleFont.GetHeight() + 10;
+            }
+
+            // Print headers
+            float[] columnWidths = new float[grid.Columns.Count];
+            float totalWidth = 0;
+            using (Font headerFont = new Font("Times New Roman", 10, FontStyle.Bold))
+            {
+                for (int i = 0; i < grid.Columns.Count; i++)
+                {
+                    float width = e.Graphics.MeasureString(grid.Columns[i].HeaderText, headerFont).Width + 10;
+                    columnWidths[i] = width;
+                    totalWidth += width;
+                }
+
+                float scale = Math.Min(1.0f, availableWidth / totalWidth);
+                float x = leftMargin;
+
+                for (int i = 0; i < grid.Columns.Count; i++)
+                {
+                    columnWidths[i] *= scale;
+                    e.Graphics.DrawString(grid.Columns[i].HeaderText, headerFont, Brushes.Black, x, topMargin);
+                    x += columnWidths[i];
+                }
+                topMargin += headerFont.GetHeight() + 5;
+            }
+
+            // Print data
+            using (Font dataFont = new Font("Arial", 9))
+            {
+                foreach (DataGridViewRow row in grid.Rows)
+                {
+                    if (topMargin > availableHeight)
+                    {
+                        e.HasMorePages = true;
+                        return;
+                    }
+
+                    float x = leftMargin;
+                    for (int i = 0; i < grid.Columns.Count; i++)
+                    {
+                        string cellValue = row.Cells[i].Value?.ToString() ?? "";
+                        e.Graphics.DrawString(cellValue, dataFont, Brushes.Black, x, topMargin);
+                        x += columnWidths[i];
+                    }
+                    topMargin += dataFont.GetHeight() + 5;
+                }
+            }
+
+            e.HasMorePages = false;
         }
     }
 }
