@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "F:\\repo\\ShopManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|F:\\repo\\ShopManager\\frmreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|f:\\repo\\shopmanager\\frmsales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|solutionrelative:frmsales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|f:\\repo\\shopmanager\\frmreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|solutionrelative:frmreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|f:\\repo\\shopmanager\\frmproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|F:\\repo\\ShopManager\\frmmainshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|solutionrelative:frmmainshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|F:\\repo\\ShopManager\\frmproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|solutionrelative:frmproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|f:\\repo\\shopmanager\\frminventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|F:\\repo\\ShopManager\\frminventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|solutionrelative:frminventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|f:\\repo\\shopmanager\\frmmainshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{737ED0F8-22DA-4097-8F3E-5CC1C04CE853}|ShopManager.csproj|solutionrelative:frmmainshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +42,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "frmSales.cs",
+              "DocumentMoniker": "F:\\repo\\ShopManager\\frmSales.cs",
+              "RelativeDocumentMoniker": "frmSales.cs",
+              "ToolTip": "F:\\repo\\ShopManager\\frmSales.cs",
+              "RelativeToolTip": "frmSales.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAYwFsAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-07T12:31:21.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "frmProducts.cs",
               "DocumentMoniker": "F:\\repo\\ShopManager\\frmProducts.cs",
               "RelativeDocumentMoniker": "frmProducts.cs",
@@ -46,12 +63,11 @@
               "RelativeToolTip": "frmProducts.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAANQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T12:38:13.619Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-06T12:38:13.619Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "frmInventory.cs",
               "DocumentMoniker": "F:\\repo\\ShopManager\\frmInventory.cs",
               "RelativeDocumentMoniker": "frmInventory.cs",
@@ -59,12 +75,11 @@
               "RelativeToolTip": "frmInventory.cs",
               "ViewState": "AgIAAN0AAAAAAAAAAAAAwP0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T12:25:31.359Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-06T12:25:31.359Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "frmMainShop.cs",
               "DocumentMoniker": "F:\\repo\\ShopManager\\frmMainShop.cs",
               "RelativeDocumentMoniker": "frmMainShop.cs",
@@ -77,13 +92,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "frmReports.cs",
               "DocumentMoniker": "F:\\repo\\ShopManager\\frmReports.cs",
               "RelativeDocumentMoniker": "frmReports.cs",
-              "ToolTip": "F:\\repo\\ShopManager\\frmReports.cs*",
-              "RelativeToolTip": "frmReports.cs*",
-              "ViewState": "AgIAABgBAAAAAAAAAAAcwDMBAAA+AAAAAAAAAA==",
+              "ToolTip": "F:\\repo\\ShopManager\\frmReports.cs",
+              "RelativeToolTip": "frmReports.cs",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAswAcAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-01T09:57:21.851Z",
               "EditorCaption": ""

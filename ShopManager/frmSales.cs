@@ -71,8 +71,8 @@ namespace ShopManager
             }
 
             pnlSalesOverview.Controls.Add(lblSalesTitle);
-
-            // Sales Grid
+            //// Don't touch to this code i can't remember what i did
+            //// Sales Grid
             DataGridView dgvSales = new DataGridView
             {
                 Dock = DockStyle.Fill,
