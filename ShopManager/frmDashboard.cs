@@ -22,7 +22,7 @@ namespace ShopManager
         {
             // Calculate card width
             int cardWidth = Math.Max(0, (parent.Width - (5 * 10)) / 4);
-
+            //distance between the cards and the panel parent
             Panel card = new Panel
             {
                 Width = cardWidth,

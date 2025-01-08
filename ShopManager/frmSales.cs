@@ -18,7 +18,7 @@ namespace ShopManager
         private Button btnAdd;
         private Button btnRemove;
         private Button btnCheckout;
-        private Button btnCompleteCheckout; // Nút mới
+        private Button btnCompleteCheckout; 
 
         public frmSales()
         {
@@ -26,18 +26,19 @@ namespace ShopManager
             InitializeSales();
             LoadSampleData();
         }
-
+        //anchorstyle: make a distance from button to panel
+        //dockstyle: fill the top-panel on the bottom-panel
         private void InitializeSales()
         {
             this.Text = "Sales Management";
-            this.Size = new Size(1200, 700); // Kích thước tổng thể của form
+            this.Size = new Size(1200, 700); 
             this.BackColor = Color.White;
 
             // Top Panel - Search and Filter
             Panel pnlTop = new Panel
             {
                 Dock = DockStyle.Top,
-                Height = 70, // Đảm bảo đủ không gian
+                Height = 70, 
                 BackColor = Color.FromArgb(241, 241, 241),
                 Padding = new Padding(10)
             };
@@ -101,16 +102,16 @@ namespace ShopManager
                 FullRowSelect = true,
                 GridLines = true,
                 Location = new Point(10, pnlTop.Bottom + 10),
-                Size = new Size(570, 450), // Giảm chiều cao để không đè lên nút
+                Size = new Size(570, 450), 
                 Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Bottom
             };
             lvProducts.Columns.AddRange(new ColumnHeader[]
             {
-        new ColumnHeader { Text = "ID", Width = 80 },
-        new ColumnHeader { Text = "Product", Width = 200 },
-        new ColumnHeader { Text = "Category", Width = 100 },
-        new ColumnHeader { Text = "Price", Width = 100 },
-        new ColumnHeader { Text = "Stock", Width = 90 }
+                new ColumnHeader { Text = "ID", Width = 80 },
+                new ColumnHeader { Text = "Product", Width = 200 },
+                new ColumnHeader { Text = "Category", Width = 100 },
+                new ColumnHeader { Text = "Price", Width = 100 },
+                new ColumnHeader { Text = "Stock", Width = 90 }
             });
 
             // Cart ListView - Right Side
@@ -120,23 +121,23 @@ namespace ShopManager
                 FullRowSelect = true,
                 GridLines = true,
                 Location = new Point(610, pnlTop.Bottom + 10),
-                Size = new Size(570, 450), // Giảm chiều cao tương tự
+                Size = new Size(570, 450), 
                 Anchor = AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom
             };
             lvCart.Columns.AddRange(new ColumnHeader[]
             {
-        new ColumnHeader { Text = "ID", Width = 80 },
-        new ColumnHeader { Text = "Product", Width = 200 },
-        new ColumnHeader { Text = "Price", Width = 100 },
-        new ColumnHeader { Text = "Quantity", Width = 80 },
-        new ColumnHeader { Text = "Subtotal", Width = 100 }
+                new ColumnHeader { Text = "ID", Width = 80 },
+                new ColumnHeader { Text = "Product", Width = 200 },
+                new ColumnHeader { Text = "Price", Width = 100 },
+                new ColumnHeader { Text = "Quantity", Width = 80 },
+                new ColumnHeader { Text = "Subtotal", Width = 100 }
             });
 
             // Buttons Panel
             Panel pnlButtons = new Panel
             {
                 Dock = DockStyle.Bottom,
-                Height = 100, // Đảm bảo không bị che
+                Height = 100, 
                 BackColor = Color.FromArgb(241, 241, 241)
             };
 
@@ -144,7 +145,7 @@ namespace ShopManager
             {
                 Text = "Add to Cart",
                 Size = new Size(120, 35),
-                Location = new Point(400, 30), // Đặt nút cân đối
+                Location = new Point(400, 30), 
                 BackColor = Color.FromArgb(46, 204, 113),
                 ForeColor = Color.White
             };
@@ -154,7 +155,7 @@ namespace ShopManager
             {
                 Text = "Remove Item",
                 Size = new Size(120, 35),
-                Location = new Point(540, 30), // Cách nút Add khoảng 140px
+                Location = new Point(540, 30), 
                 BackColor = Color.FromArgb(231, 76, 60),
                 ForeColor = Color.White
             };
@@ -172,8 +173,8 @@ namespace ShopManager
             btnCompleteCheckout = new Button
             {
                 Text = "Complete Checkout",
-                Size = new Size(100, 35),
-                Location = new Point(700, 30),
+                Size = new Size(120, 35),
+                Location = new Point(680, 30),
                 BackColor = Color.FromArgb(241, 196, 15),
                 ForeColor = Color.Black
             };
@@ -182,7 +183,7 @@ namespace ShopManager
             lblTotal = new Label
             {
                 Text = "Total: $0.00",
-                Font = new Font("Arial", 12, FontStyle.Bold),
+                Font = new Font("Times New Roman", 12, FontStyle.Bold),
                 Location = new Point(850, 40),
                 AutoSize = true
             };
@@ -354,17 +355,12 @@ namespace ShopManager
             if (MessageBox.Show(message, "Confirm Checkout",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                // Here you would typically:
-                // 1. Save the transaction to database
-                // 2. Update inventory
-                // 3. Generate receipt
                 MessageBox.Show("Checkout completed successfully!", "Success",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 lvCart.Items.Clear();
                 UpdateTotal();
             }
         }
-
         private void UpdateTotal()
         {
             decimal total = CalculateTotal();

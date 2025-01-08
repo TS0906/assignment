@@ -47,9 +47,9 @@ namespace ShopManager
             button3.Image = SystemIcons.Shield.ToBitmap();      
             button4.Image = SystemIcons.Warning.ToBitmap();     
             button5.Image = SystemIcons.Question.ToBitmap();    
-            button6.Image = SystemIcons.Error.ToBitmap();       
+            button6.Image = SystemIcons.Error.ToBitmap();
 
-            // Configure button properties
+            // Configure button properties in panel1
             foreach (Button btn in panel1.Controls.OfType<Button>())
             {
                 btn.ImageAlign = ContentAlignment.MiddleLeft;
@@ -107,7 +107,7 @@ namespace ShopManager
             Button btn = sender as Button;
             currentButton = btn;
             btn.BackColor = Color.FromArgb(230, 126, 34);
-
+            // Handle button mouse click, mouse enter with tab and mouse leave
             // Handle button clicks here
         }
         private void button1_Click(object sender, EventArgs e)

@@ -21,7 +21,7 @@ namespace ShopManager
 
         private void InitializeComponent()
         {
-            // Previous initialization code remains the same until CreateActionPanel
+            
             this.Text = "Reports";
             this.BackColor = Color.White;
             this.Size = new Size(800, 600);
@@ -52,11 +52,9 @@ namespace ShopManager
             this.Controls.Add(pnlActions);
             this.Controls.Add(lblTitle);
         }
-
-        // Previous tab creation methods remain the same
+        // Existing implementation remains unchanged
         private TabPage CreateSalesReportTab()
         {
-            // Existing implementation remains unchanged
             TabPage tabSales = new TabPage("Sales Report");
             DataGridView dgvSales = new DataGridView
             {
@@ -84,7 +82,6 @@ namespace ShopManager
 
         private TabPage CreateInventoryReportTab()
         {
-            // Existing implementation remains unchanged
             TabPage tabInventory = new TabPage("Inventory Report");
             DataGridView dgvInventory = new DataGridView
             {
@@ -112,7 +109,6 @@ namespace ShopManager
 
         private TabPage CreateCustomerReportTab()
         {
-            // Existing implementation remains unchanged
             TabPage tabCustomers = new TabPage("Customer Report");
             DataGridView dgvCustomers = new DataGridView
             {
@@ -170,7 +166,7 @@ namespace ShopManager
 
             return pnlActions;
         }
-
+        // make an export output by excel files
         private void BtnExportReport_Click(object sender, EventArgs e)
         {
             try
@@ -204,7 +200,7 @@ namespace ShopManager
                 MessageBox.Show($"Export failed: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        // make a print preview clone 
         private void BtnPrintReport_Click(object sender, EventArgs e)
         {
             try
@@ -240,7 +236,7 @@ namespace ShopManager
                 MessageBox.Show($"Printing failed: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        // return if SelectedTab == null but in this applycation that situation can't appear 100%
         private DataGridView GetCurrentDataGridView()
         {
             if (tabReports.SelectedTab == null)
@@ -251,7 +247,7 @@ namespace ShopManager
 
             return tabReports.SelectedTab.Controls.OfType<DataGridView>().FirstOrDefault();
         }
-
+        // method export to excel
         private void ExportToCSV(DataGridView grid, string filename)
         {
             StringBuilder sb = new StringBuilder();
@@ -278,14 +274,12 @@ namespace ShopManager
 
         private void ExportToExcel(DataGridView grid, string filename)
         {
-            // Note: This is a placeholder for Excel export functionality
-            // You would typically use a library like EPPlus or Microsoft.Office.Interop.Excel
             MessageBox.Show("Excel export functionality requires additional libraries. Please implement using your preferred Excel library.",
                           "Not Implemented",
                           MessageBoxButtons.OK,
                           MessageBoxIcon.Information);
         }
-
+        //page settings for print preview
         private void PrintPage(object sender, PrintPageEventArgs e, DataGridView grid)
         {
             // Page settings
@@ -327,7 +321,7 @@ namespace ShopManager
             }
 
             // Print data
-            using (Font dataFont = new Font("Arial", 9))
+            using (Font dataFont = new Font("Times New Roman", 9))
             {
                 foreach (DataGridViewRow row in grid.Rows)
                 {
