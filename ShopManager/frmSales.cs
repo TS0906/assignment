@@ -18,6 +18,7 @@ namespace ShopManager
         private Button btnAdd;
         private Button btnRemove;
         private Button btnCheckout;
+        private Button btnCompleteCheckout; // Nút mới
 
         public frmSales()
         {
@@ -168,6 +169,15 @@ namespace ShopManager
                 ForeColor = Color.White
             };
             btnCheckout.Click += BtnCheckout_Click;
+            btnCompleteCheckout = new Button
+            {
+                Text = "Complete Checkout",
+                Size = new Size(100, 35),
+                Location = new Point(700, 30),
+                BackColor = Color.FromArgb(241, 196, 15),
+                ForeColor = Color.Black
+            };
+            btnCompleteCheckout.Click += BtnCompleteCheckout_Click;
 
             lblTotal = new Label
             {
@@ -177,12 +187,41 @@ namespace ShopManager
                 AutoSize = true
             };
 
-            pnlButtons.Controls.AddRange(new Control[] { btnAdd, btnRemove, btnCheckout, lblTotal });
+            pnlButtons.Controls.AddRange(new Control[] { btnAdd, btnRemove, btnCheckout, btnCompleteCheckout, lblTotal });
 
             // Add Controls to Form
             this.Controls.AddRange(new Control[] { pnlTop, lvProducts, lvCart, pnlButtons });
         }
+        private void BtnCompleteCheckout_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem cartItem in lvCart.Items)
+            {
+                string productId = cartItem.SubItems[0].Text;
+                int quantity = int.Parse(cartItem.SubItems[3].Text);
 
+                foreach (ListViewItem productItem in lvProducts.Items)
+                {
+                    if (productItem.SubItems[0].Text == productId)
+                    {
+                        int currentStock = int.Parse(productItem.SubItems[4].Text);
+                        int newStock = currentStock - quantity;
+
+                        if (newStock < 0)
+                        {
+                            MessageBox.Show($"Not enough stock for {productItem.SubItems[1].Text}.", "Stock Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+
+                        productItem.SubItems[4].Text = newStock.ToString();
+                        break;
+                    }
+                }
+            }
+
+            lvCart.Items.Clear();
+            UpdateTotal();
+            MessageBox.Show("Checkout completed and stock updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
 
         private void LoadSampleData()
         {
